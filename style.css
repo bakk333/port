@@ -1,0 +1,259 @@
+/* Webkit Scrollbar Styling (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+	width: 8px; /* Width of the scrollbar */
+	height: 8px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+	background-color: #1f1f40; /* Track background color */
+	border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #5a5a8b; /* Scrollbar thumb color */
+	border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #7878a5; /* Hover color for the scrollbar thumb */
+}
+
+/* Firefox Scrollbar Styling */
+* {
+	scrollbar-width: thin; /* Makes the scrollbar thinner */
+	scrollbar-color: #5a5a8b #1f1f40; /* Thumb color | Track color */
+}
+
+/* Optional: Styling for Scrollbars in Specific Elements */
+.modal-body {
+	overflow-y: auto; /* Enables vertical scroll in the modal */
+	scrollbar-width: thin;
+	scrollbar-color: #5a5a8b #1f1f40;
+}
+
+/* Optional: Hover effect for scrollable divs */
+.modal-body:hover::-webkit-scrollbar-thumb {
+	background-color: #7878a5; /* Darker shade on hover */
+}
+
+body {
+	background-color: rgb(7, 5, 40);
+	color: #d1d1e0;
+	font-family: Arial, sans-serif;
+}
+
+.sidebar {
+	width: 200px;
+	background-color: transparent;
+	height: 100vh;
+	position: fixed;
+	padding-top: 20px;
+}
+
+.sidebar a {
+	color: #d1d1e0;
+	padding: 10px 15px;
+	display: block;
+	text-decoration: none;
+}
+
+.main-content {
+	margin-left: 220px;
+	padding: 20px;
+}
+
+.form-container {
+	background-color: transparent;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 400px;
+	margin: auto;
+}
+
+.form-container label {
+	color: #d1d1e0;
+}
+
+.input-group-custom {
+	background-color: #181a2d;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	margin-bottom: 16px;
+}
+
+/* .input-group-custom svg {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    } */
+
+.form-select-custom,
+.form-control-custom {
+	background-color: transparent;
+	border: none;
+	color: #d1d1e0;
+	flex-grow: 1;
+	padding: 10px;
+}
+
+.form-select-custom:focus,
+.form-control-custom:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.btn-custom {
+	background-color: #6a3bd4;
+	color: #fff;
+	border: none;
+	width: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+.btn-custom:hover {
+	background-color: #5a2dbb;
+}
+
+.powered-by {
+	text-align: center;
+	color: #d1d1e0;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.modal-content {
+	background: rgb(24, 26, 45) !important;
+}
+
+.network-icons svg {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+/* Container Styling */
+.search-bar {
+	display: flex;
+	align-items: center;
+	background-color: #1f1f40;
+	/* Dark background for the search bar */
+	border-radius: 20px;
+	/* Rounded corners */
+	padding: 8px 12px;
+	/* Padding inside the container */
+	width: 100%;
+	/* Full width */
+	max-width: 300px;
+	/* Optional: limit width */
+	border: white;
+}
+
+/* Icon Styling */
+.search-bar span {
+	color: #7878a5;
+	/* Color of the search icon */
+	margin-right: 8px;
+	/* Spacing between icon and input */
+	display: flex;
+	align-items: center;
+}
+
+/* Input Styling */
+.search-bar input {
+	border: none;
+	/* Removes default border */
+	background-color: transparent;
+	/* Matches the container background */
+	color: #e0e0ff;
+	/* Text color */
+	font-size: 16px;
+	outline: none;
+	/* Removes focus outline */
+	width: 100%;
+	/* Full width of remaining space */
+}
+
+/* Placeholder Styling */
+.search-bar input::placeholder {
+	color: #7878a5;
+	/* Placeholder color */
+}
+
+#token-list {
+	padding: 20px; /* Padding around the token list */
+}
+
+.token-item {
+	display: flex; /* Flexbox for alignment */
+	align-items: center; /* Center items vertically */
+	padding: 10px; /* Padding for each token item */
+	border-bottom: 1px solid #444; /* Bottom border for separation */
+}
+
+.token-logo {
+	width: 30px; /* Logo size */
+	height: 30px; /* Logo size */
+	margin-right: 10px; /* Space between logo and text */
+}
+
+.token-name {
+	font-weight: bold; /* Bold token name */
+	margin-right: auto; /* Pushes the small text to the right */
+}
+
+.token-item small {
+	color: #aaa; /* Lighter color for small text */
+	font-size: 10px; /* Smaller font size */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.sidebar {
+		display: none;
+		/* Hide sidebar on mobile */
+	}
+
+	.main-content {
+		margin-left: 0;
+		padding: 20px 10px;
+	}
+
+	.form-container {
+		max-width: 100%;
+		padding: 15px;
+	}
+	.modal-dialog {
+		width: 90%; /* Reduce width on smaller screens */
+		max-width: none; /* Remove max-width restriction */
+		margin: 20px auto; /* Add some margin for better positioning */
+	}
+
+	.modal-content {
+		max-height: 50vh !important; /* Limit the height of the modal */
+		overflow-y: auto; /* Add scrolling if content overflows */
+	}
+
+	.network-icons svg {
+	width: 30px !important;
+	height: 30px !important;
+}
+}
+
+.mobile-logo {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.mobile-logo {
+		display: block;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.desktop-logo {
+		display: none;
+	}
+}
